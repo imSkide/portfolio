@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    font-family: "Audiowide", sans-serif;
+    color: #85aca8;
+    background: #000000;
+    padding: 0;
+    background-image: url('./img/palmiers.png'), url('./img/palmiers1.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, bottom right;
+    background-size: 400px auto, 600px auto;
+    background-attachment: fixed, fixed;
+}
+
+
+body.is-loading{
+  overflow: hidden;
+}
+
+
+
+
+.header {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    
+}
+
+h2 {
+    margin: 0;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff00cc, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #00ffff, #ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+
+
+.nav {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #00ffff, #ff00cc) 1;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+
+
+.nav a {
+    color: #85aca8;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    color: linear-gradient(90deg, #00ffff, #ff00cc);;
+}
+.nav a:hover {
+    color: #ff00cc;
+}
+
+
+.youtube-container {
+  display: inline-block;
+  background-color: #000;
+  padding: 8px; 
+  border: 3px solid #ff00cc; 
+  border-radius: 15px; 
+  box-shadow: 0 0 15px #ff00cc, 0 0 30px #00ffff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+}
+
+.youtube-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00cc, 0 0 50px #00ffff;
+}
+
+
+
+
+
+/* --------------------------------- LA SECTION PROJET --------------------------------- */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin: 80px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #00ffff, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-content p {
+  font-size: 1.2rem;
+  color: #85aca8;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #00ffff, #ff00cc) 1;
+  background: none;
+  color: #85aca8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #00ffff22, #ff00cc22);
+  color: #fff;
+}
+
+.project-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff00cc, 0 0 40px #00ffff;
+}
+
+
+
+
+/* --------------------------------- PRELOADR --------------------------------- */
+
+
+#preloader {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: #000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-logo img {
+  width: 320px;
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #ff00ff) drop-shadow(0 0 10px #00ffff);
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 25px #00ffff);
+    transform: scale(1.1);
+  }
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+/* --------------------------------- GESTION BOUTTON --------------------------------- */
+.btn-popup {
+  padding: 10px 20px;
+  background-color: #bb44bb;
+  margin-top: 25px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-popup:hover {
+  background-color: #a733a7;
+}
+
+
+
+
+
+
+/* --------------------------------- GESTION DES POP UP --------------------------------- */
+.popup {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;           
+}
+
+
+.popup.show {
+  display: flex; 
+}
+
+.popup-content {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border: 2px solid #ff00ff;
+  width: 90%;
+  max-width: 700px;
+  
+ 
+  max-height: 85vh;    
+  overflow-y: auto;    
+  
+  text-align: center;
+  border-radius: 10px;
+  position: relative;  /* Important pour le bouton fermer */
+  
+  /* Animation */
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.popup.show .popup-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.popup-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.close {
+  color: white;
+  position: sticky;   
+  top: 0;
+  right: 0;
+  float: right;       
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;        
+}
+
+.close:hover {
+  color: #ff00ff;
+}

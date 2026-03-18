@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <title>Portfolio | VAL Anthony</title>
+</head>
+
+<body class="is-loading">
+
+    <nav class="header">
+
+
+        <div class="nav">
+            <h2>
+                <a href="./index.html">Accueil<span></span></a>
+            </h2>
+            <h1>
+                <a href="./presentation.html">Présentation<span></span></a>
+            </h1>
+            <h2>
+                <a href="./projets.html">Projets<span></span></a>
+            </h2>
+            <h1>
+                <a href="./contact.html">Contacts<span></span></a>
+            </h1>
+        </div>
+
+    </nav>
+
+    <!-- POUR LE LOADER  -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="./img/logo.png" alt="Chargement...">
+        </div>
+    </div>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content animated">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img src="/img/processfac.png" alt="Image popup">
+            <button class="btn-popup" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+
+    <div id="popup1" class="popup">
+        <div class="popup-content animated">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img src="/img/montage.png" alt="Image popup">
+            <button class="btn-popup" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+
+    <div id="popup2" class="popup">
+        <div class="popup-content animated">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Migration Orange vers Bouygues Telecom</h2>
+            <p> Volume : Environ 1700 lignes téléphoniques </p>
+
+            <h4>Mission</h4>
+
+            <p>Piloter et réaliser la migration complète de l’infrastructure téléphonique de l’entreprise, en assurant
+                la continuité de service et en minimisant l’impact pour les utilisateurs. </p>
+
+            <h4>Analyse et préparation</h4>
+
+            <ul>
+                <li>Audit complet du parc téléphonique existant (fixe, mobile, data)</li>
+
+                <li>Identification des lignes actives, obsolètes ou non utilisées</li>
+
+                <li>Nettoyage du parc pour optimiser les coûts avant migration</li>
+
+                <li>Vérification des engagements contractuels et dates de fin</li>
+
+                <li>Coordination avec Orange et Bouygues Telecom</li>
+            </ul>
+
+            <h4>Communication interne</h4>
+
+            <ul>
+                <li>Information des collaborateurs sur le planning de migration</li>
+
+                <li>Explication des impacts potentiels (coupure temporaire, changement SIM, etc.)</li>
+
+                <li>Mise en place d’un support dédié pendant la transition</li>
+
+                <li>Relances ciblées pour les utilisateurs sensibles (direction, sites critiques)</li>
+
+                <h4>Portabilité des numéros</h4>
+
+                <li>Planification des vagues de portabilité</li>
+
+                <li>Gestion administrative des demandes de portage</li>
+
+                <li>Suivi des dates effectives de bascule</li>
+
+                <li>Gestion des incidents de portabilité (retards, erreurs de numéros, etc.)</li>
+
+            </ul>
+
+            <h4>Tests et validation</h4>
+            <ul>
+
+                <li>Vérification du bon fonctionnement des lignes après bascule :</li>
+
+                <li>Appels entrants / sortants</li>
+
+                <li>Data mobile</li>
+
+                <li>Renvois d’appels</li>
+
+                <li>Messagerie vocale</li>
+
+                <li>Tests sur sites stratégiques</li>
+            </ul>
+
+            <h4>Suivi post-migration</h4>
+            <ul>
+
+                <li>Support utilisateurs durant les premières semaines</li>
+
+                <li>Résolution des incidents remontés</li>
+
+                <li>Vérification des abonnements</li>
+
+                <li>Vérification de la facturation</li>
+
+                <li>Contrôle des consommations</li>
+
+            </ul>
+
+            <h4>Documentation</h4>
+
+            <ul>
+
+                <li>Rédaction d’un dossier de migration complet</li>
+
+                <li>Mise à jour de l’inventaire télécom</li>
+
+                <li>Compte rendu final avec bilan coûts / gains</li>
+
+            </ul>
+
+            </p>
+            <button class="btn-popup" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="encart-globalprojets">
+        <h5>
+            Alternance 1ère année -
+            <a href="https://www.bestdrive.fr/pneu.html" target="_blank" class="lien-h5">
+                Bestdrive
+            </a>
+            - Alternant support IT
+        </h5>
+        <div class="encarts-projets">
+            <div class="encartprojets">
+                <h4>Migration Orange vers Bouygues Telecom</h4>
+                <p><span class="sous-titre">Mission :</span><br>
+                    Réaliser la migration complète des moyens téléphoniques de la société Bestdrive (1700 lignes
+                    environ)
+                </p>
+                <p><span class="sous-titre">Actions réalisées :</span><br>
+                    Analyse des lignes existantes et nettoyage du parc, communication aux utilisateurs, portabilité,
+                    tests, suivi post-migration, documentation
+
+                    <button class="btn-popup" onclick="openPopup('popup2')">Plus de détails</button>
+                </p>
+            </div>
+            <div class="encartprojets">
+                <h4>Documentation process de facturation</h4>
+                <p><span class="sous-titre">Mission :</span><br>
+                    Documenter et schématiser le process de facturation de la société Bestdrive, jamais réalisé jusque
+                    là
+                </p>
+                <p><span class="sous-titre">Actions réalisées :</span><br>
+                    Renseignement sur le fonctionnement de la facturation, conception du schéma, présentation et
+                    impression
+
+                    <button class="btn-popup" onclick="openPopup('popup')">Process de facturation</button>
+
+                </p>
+            </div>
+            <div class="encartprojets">
+                <h4>Remplacement des platines agences</h4>
+                <p><span class="sous-titre">Mission :</span><br>
+                    Apporter un soutien au service IT afin de remplacer l'ensemble des platines en agences (500 environ)
+                </p>
+                <p><span class="sous-titre">Actions réalisées :</span><br>
+                    Reception et configuration des platines, préparation et envoi, support aux utilisateurs une fois
+                    reçues afin de s'assurer du
+                    bon fonctionnement
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="encart-globalprojets">
+        <h5>
+            Alternance 2ème année -
+            <a href="https://www.keyyo.com/fr/" target="_blank" class="lien-h6">
+                Keyyo (Groupe Bouygues Telecom)
+            </a>
+            - Alternant Nursering Keyyo
+        </h5>
+
+        <div class="encarts-projets">
+            <div class="encartprojets">
+                <h4>Gestion de tickets clients</h4>
+                <p><span class="sous-titre">Mission :</span><br>
+                    Répondre aux demandes clients
+                </p>
+                <p><span class="sous-titre">Actions réalisées :</span><br>
+                    Gestion de tickets, résolution de problématiques clients, paramétrage de la solution VOiP Keyyo
+
+                    <a href="https://www.lemondeinformatique.fr/publi_info/lire-voip-definition-fonctionnement-et-avantages-pour-une-entreprise-706.html"
+                        target="_blank" style="text-decoration: none;">
+                        <button class="btn-popup">Qu'est ce que la VOiP ?</button>
+                    </a>
+
+                </p>
+            </div>
+  
+
+
+
+            <div class="encartprojets">
+                <h4>Création de tutoriel</h4>
+                <p><span class="sous-titre">Mission :</span><br>
+                    Schématiser via video tutoriel l'utilisation de l'espace client.
+                    L'espace client Keyyo est complexe et nécessite une formation pour une utilisation complète.
+                </p>
+                <p><span class="sous-titre">Actions réalisées :</span><br>
+                <ul>
+                    <li>Formation sur l'espace client, nommé Keyyo Manager</li>
+                    <li>Production des extraits vidéos et montage</li>
+                    <li>Validation responsable</li>
+                    <li>Mise en place des vidéos tutoriel pour les clients</li>
+
+                </ul>
+                <button class="btn-popup" onclick="openPopup('popup1')">Montage tutoriel</button>
+
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
