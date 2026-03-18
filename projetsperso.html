@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleprojetperso.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <title>Portfolio | VAL Anthony</title>
+</head>
+
+<body class="is-loading">
+
+    <!-- NAVIGATION -->
+    <nav class="header">
+        <div class="nav">
+            <h2><a href="./index.html">Accueil</a></h2>
+            <h1><a href="./presentation.html">Présentation</a></h1>
+            <h2><a href="./projets.html">Projets</a></h2>
+            <h1><a href="./contact.html">Contacts</a></h1>
+        </div>
+    </nav>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="./img/logo.png" alt="Chargement...">
+        </div>
+    </div>
+
+
+    <div id="popup5" class="popup">
+        <div class="popup-content animated">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img src="/img/feater.png" alt="Image popup">
+            <button class="btn-popup" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+
+    <main class="projects">
+
+        <section class="project">
+            <div class="project-content">
+                <h2>Feater</h2>
+                <p>En dehors de ma formation, j'ai décidé de commencer le développement d'une plateforme nommée Feater,
+                    permettant à des artistes de se rencontrer selon leurs envies et styles musicaux, afin d'effectuer
+                    des créations musicales.</p>
+                <button class="btn-popup" onclick="openPopup('popup5')">Temporaire</button>
+                <a href="#" class="btn">Voir plus</a>
+            </div>
+            <div class="project-img">
+                <img src="./img/moi.png" alt="Projet 3">
+            </div>
+        </section>
+
+
+        <section class="project reverse">
+            <div class="project-content">
+                <h2>DJ Skide</h2>
+                <p>Depuis peu, je suis devenu auto-entrepreneur et ai créé ma micro entreprise en tant que DJ
+                    professionel. Vous souhaitez un devis pour
+                    une prestation ? Je me ferai un plaisir de vous répondre !</p>
+                <a href="devis.html" class="btn">Mon devis</a>
+            </div>
+            <div class="project-img">
+                <img src="./img/moidj.png" alt="Projet 1">
+            </div>
+        </section>
+
+
+        <section class="project ">
+            <div class="project-content">
+                <h2>Skide</h2>
+                <p>En dehors de ma formation, et de mes prestations en tant que DJ, je produis mes propres musiques
+                    originales et remixés.</p>
+                <a href="skide.html" class="btn">Voir plus</a>
+            </div>
+            <div class="project-img">
+                <img src="./img/moimoi.png" alt="Projet 2">
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

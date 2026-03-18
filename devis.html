@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <title>Skide | Devis</title>
+</head>
+
+<body class="is-loading">
+
+
+    <nav class="header">
+
+
+        <div class="nav">
+            <h2>
+                <a href="./index.html">Accueil<span></span></a>
+            </h2>
+            <h1>
+                <a href="./presentation.html">Présentation<span></span></a>
+            </h1>
+            <h2>
+                <a href="./projets.html">Projets<span></span></a>
+            </h2>
+            <h1>
+                <a href="./contact.html">Contacts<span></span></a>
+            </h1>
+        </div>
+
+    </nav>
+
+    <!-- POUR LE LOADER  -->
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="./img/logo.png" alt="Chargement...">
+        </div>
+    </div>
+
+
+
+
+
+
+<section class="page-wrapper">
+
+    <div class="info-card contact-form-card">
+        <h2 class="titre-section">DEMANDE DE DEVIS</h2>
+        <div class="trait3"></div>
+
+        <p>
+            Remplis le formulaire ci-dessous pour obtenir un devis pour ton événement :
+            Anniversaire, mariage, mix en lieu privé ou autre.
+        </p>
+
+        <!-- MESSAGE DE RETOUR -->
+        <p id="form-message" style="display:none;"></p>
+
+        <form id="contact-form" action="mail_devis.php" method="POST" class="neon-form">
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="text" name="telephone" placeholder="Téléphone" required>
+            <input type="email" name="email" placeholder="Email" required>
+
+            <select name="event" required>
+                <option value="">-- Type d'événement --</option>
+                <option value="Mariage">Mariage</option>
+                <option value="Anniversaire">Anniversaire</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <input type="date" name="date" required>
+
+            <textarea name="message" rows="3" placeholder="Décrivez votre événement..." required></textarea>
+
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+
+    </div>
+</section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const message = document.getElementById("form-message");
+
+    if (params.has("success")) {
+        message.textContent = "✅ Message envoyé avec succès";
+        message.style.color = "#00ff99";
+        message.style.display = "block";
+    }
+
+    if (params.has("error")) {
+        message.textContent = "❌ Erreur lors de l’envoi du message";
+        message.style.color = "red";
+        message.style.display = "block";
+    }
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
